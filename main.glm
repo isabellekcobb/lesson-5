@@ -6,17 +6,16 @@
 // Task 1 - set the clock
 clock
 {
-    timezone America/Los_Angeles;
-    starttime "2020-01-01 12:00:00 PDT";
-    stoptime "2021-01-01 12:00:00 PDT";
+    timezone America/Arizona/Phoenix;
+    starttime "2020-01-01 12:00:00 MST";
+    stoptime "2021-01-01 12:00:00 MST";
 }
 
 // Task 2 - Load weather data 
-#ifmissing "CA-Los_Angeles_Intl_Arpt.glm"
-#weather get CA-Los_Angeles_Intl_Arpt
+#ifmissing "AZ-Phoenix_Sky_Harbor_Intl_Ap.tmy3"
+#weather get AZ-Phoenix_Sky_Harbor_Intl_Ap.tmy3
 #endif
-#input "CA-Los_Angeles_Intl_Arpt.tmy3"
+#input "AZ-Phoenix_Sky_Harbor_Intl_Ap.tmy3"
 
-bash$ gridlabd weather index ^AZ
 
 #output "IEEE-123-voltage-profile.png" -t profile -l 10
