@@ -17,6 +17,6 @@ clock
 #endif
 #input "CA-Los_Angeles_Intl_Arpt.tmy3"
 
-bash$ weather index ^AZ
+bash$ gridlabd weather index Phoenix
 
 #output "IEEE-123-voltage-profile.png" -t profile -l 10
